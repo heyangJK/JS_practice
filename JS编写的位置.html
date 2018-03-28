@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--
+        	作者：358101181@qq.com
+        	时间：2018-03-26
+        	描述：js 代码最好不要写在button、a标签里，这样耦合太大
+        -->
+		<button onclick ="alert('当点击按钮后才输出');">点我</button>
+		<a href="javascript:alert('将js代码写在超链接的href属性中，当点击超链接时，会执行js代码')">超链接 a</a>
+		<!--
+        	作者：358101181@qq.com
+        	时间：2018-03-26
+        	描述：可将js代码写在外部js文件中，再通过script标签引入
+        	优点：可同时使用外部文件，也可利用浏览器的缓存机制，最推荐
+        -->
+		<script type="text/javascript" src="js/script.js">
+			alert("我是内部js，但因为此script标签一旦用于引用外部文件，就不能编写代码了，写了也会被忽略")
+		</script>
+		<!--
+        	作者：358101181@qq.com
+        	时间：2018-03-26
+        	描述：如果需要则要再创建一个新的script标签用于编写内部代码
+        -->
+        <script type="text/javascript">
+        	alert("我是新js标签的里的内部js代码")
+        </script>
+	</body>
+</html>
